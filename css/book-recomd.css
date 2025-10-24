@@ -1,129 +1,152 @@
-/* ==============================
-   โครงสร้างพื้นฐานของเว็บ
-============================== */
-body {
-  font-family: "Sarabun", "Prompt", sans-serif;
-  line-height: 1.7;
-  color: #333;
-  background-color: #fff;
+/* ---------- ฟอนต์เหมือนกันทั้งหมด ---------- */
+* {
+    font-family: 'Itim', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* ==============================
-   Navbar
-============================== */
-.navbar {
-  background-color: #fffaf0;
-  padding: 0.8rem 1rem;
+/* ---------- พื้นหลัง ---------- */
+body {
+    line-height: 1.7;
+    color: #333;
+    background: linear-gradient(120deg, #FFDDE2, #FFF2CC, #D4F0F0); /* พาสเทลออมเบร */
+    min-height: 100vh;
+}
+
+/* ---------- ส่วนหัว ---------- */
+header {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
 }
 
 .navbar-brand img {
-  transition: transform 0.3s ease;
+    border-radius: 8px;
 }
 
-.navbar-brand img:hover {
-  transform: rotate(-5deg) scale(1.1);
+/* ---------- Section ---------- */
+section {
+    padding: 60px 0;
 }
 
-.nav-link {
-  color: #0d6efd;
-  font-weight: 600;
-  transition: color 0.3s;
+.bg-warning-subtle {
+    background: linear-gradient(to right, #FFE6E6, #FFF7CC); /* พาสเทลออมเบร */
 }
 
-.nav-link:hover {
-  color: #ff8c00;
+/* ---------- หัวข้อ ---------- */
+h1, h2, h3, h4, h5 {
+    color: #555;
+    margin-bottom: 20px;
 }
 
-/* ==============================
-   ส่วน Hero / Section แรก
-============================== */
-section.bg-warning-subtle {
-  background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
-  border-radius: 12px;
-  margin-top: 20px;
-}
-
-section h1 {
-  font-weight: 700;
-  color: #1e3050;
-}
-
-section p {
-  color: #444;
-  font-size: 1.1rem;
-}
-
-/* ==============================
-   ส่วนเนื้อหา / Paragraph
-============================== */
-section.container {
-  max-width: 900px;
-}
-
-h3, h4 {
-  font-weight: 700;
-  color: #2e4057;
-  margin-bottom: 1rem;
-}
-
+/* ---------- Paragraph ---------- */
 p {
-  margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
 }
 
-/* ==============================
-   Accordion
-============================== */
+/* ---------- Accordion ---------- */
 .accordion-button {
-  background-color: #f8f9fa;
-  color: #333;
-  font-weight: 600;
-  transition: all 0.3s ease;
+    background-color: #FFF0F5;
+    color: #333;
+    font-weight: 500;
 }
 
-.accordion-button:not(.collapsed) {
-  background-color: #ffe69c;
-  color: #212529;
+.accordion-button:focus {
+    box-shadow: none;
 }
 
 .accordion-body {
-  background-color: #fffef6;
-  border-left: 3px solid #ffc107;
-  padding: 1rem 1.2rem;
-  color: #444;
+    background-color: #FFF7F7;
 }
 
-/* ==============================
-   วิดีโอ (YouTube)
-============================== */
-iframe {
-  border-radius: 10px;
+/* ---------- ปรับรูปภาพให้ดูนุ่มนวล ---------- */
+img {
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-/* ==============================
-   ปุ่มต่างๆ
-============================== */
-button, .btn {
-  border-radius: 8px;
-  transition: all 0.3s ease;
+/* ---------- ลิงก์ ---------- */
+a {
+    color: #FF7F50;
+    text-decoration: none;
 }
 
-button:hover, .btn:hover {
-  transform: scale(1.05);
+a:hover {
+    color: #FF4500;
+    text-decoration: underline;
 }
 
-/* ==============================
-   Responsive เพิ่มเติม
-============================== */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.8rem;
-  }
+/* ---------- ปรับ spacing ---------- */
+.container {
+    max-width: 1100px
+}
+/* ---------- หัวข้อ h1 ---------- */
 
-  section p {
-    font-size: 1rem;
-  }
 
-  .navbar-nav {
-    text-align: center;
-  }
+.img-3d {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 15px 15px 30px rgba(0,0,0,0.3); /* เงาให้ดูลอย */
+    transform: rotateY(-10deg) rotateX(5deg); /* หมุนให้ดูมีมิติ */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-3d:hover {
+    transform: rotateY(0deg) rotateX(0deg); /* หมุนกลับเมื่อ hover */
+    box-shadow: 20px 20px 40px rgba(0,0,0,0.4);
+}
+.lead {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333; /* หรือสีพาสเทลเข้มเล็กน้อย */
+    font-weight: 500;
+    text-align: justify; /* จัดข้อความให้เรียบร้อย */
+}
+
+
+
+
+
+/* ฟ้อนต์ Itim ใช้กับทั้งเว็บ */
+body, h1, h2, h3, h4, p, a {
+    font-family: 'Itim', cursive;
+}
+
+/* สีหัวข้อใหญ่ */
+h1 {
+    color: #FFD166; /* เหลืองทองพาสเทล */
+    font-weight: bold;
+}
+
+/* สีหัวข้อเล็ก */
+h2, h3, h4 {
+    color: #EF476F; /* สีชมพูพาสเทลเข้ม */
+}
+
+/* สีข้อความทั่วไป */
+p, .lead {
+    color: #333333; /* อ่านง่ายบนพื้นหลัง gradient */
+}
+
+/* สีลิงก์ */
+a {
+    color: #06AED5;
+    text-decoration: none;
+}
+a:hover {
+    color: #118AB2;
+    text-decoration: underline;
+}
+
+/* เพิ่มสไตล์ background-gradient ให้ข้อความโดดเด่น */
+.background-gradient {
+    background: linear-gradient(135deg, #FFDEE9 0%, #B5FFFC 100%);
+    padding: 50px 0;
+}
+
+/* ปรับข้อความให้เข้ากับ layout */
+.text-yellow {
+    color: #FFD166;
 }
