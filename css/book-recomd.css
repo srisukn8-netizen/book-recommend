@@ -1,0 +1,129 @@
+/* ==============================
+   โครงสร้างพื้นฐานของเว็บ
+============================== */
+body {
+  font-family: "Sarabun", "Prompt", sans-serif;
+  line-height: 1.7;
+  color: #333;
+  background-color: #fff;
+}
+
+/* ==============================
+   Navbar
+============================== */
+.navbar {
+  background-color: #fffaf0;
+  padding: 0.8rem 1rem;
+}
+
+.navbar-brand img {
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: rotate(-5deg) scale(1.1);
+}
+
+.nav-link {
+  color: #0d6efd;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ff8c00;
+}
+
+/* ==============================
+   ส่วน Hero / Section แรก
+============================== */
+section.bg-warning-subtle {
+  background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+section h1 {
+  font-weight: 700;
+  color: #1e3050;
+}
+
+section p {
+  color: #444;
+  font-size: 1.1rem;
+}
+
+/* ==============================
+   ส่วนเนื้อหา / Paragraph
+============================== */
+section.container {
+  max-width: 900px;
+}
+
+h3, h4 {
+  font-weight: 700;
+  color: #2e4057;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 0.8rem;
+}
+
+/* ==============================
+   Accordion
+============================== */
+.accordion-button {
+  background-color: #f8f9fa;
+  color: #333;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #ffe69c;
+  color: #212529;
+}
+
+.accordion-body {
+  background-color: #fffef6;
+  border-left: 3px solid #ffc107;
+  padding: 1rem 1.2rem;
+  color: #444;
+}
+
+/* ==============================
+   วิดีโอ (YouTube)
+============================== */
+iframe {
+  border-radius: 10px;
+}
+
+/* ==============================
+   ปุ่มต่างๆ
+============================== */
+button, .btn {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  transform: scale(1.05);
+}
+
+/* ==============================
+   Responsive เพิ่มเติม
+============================== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  section p {
+    font-size: 1rem;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+}
